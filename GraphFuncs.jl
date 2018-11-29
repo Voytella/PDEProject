@@ -1,5 +1,12 @@
 # plot n-many of a provided function (found in CONFIGURATION section)
 
+# ----------BEGIN CONFIGURATION----------
+
+# get the provided function for a certain value of 'n'
+getProvFunc(nVal) = (x) -> exp((x^2) / 2) * getHermite(nVal)(x);
+
+# -----------END CONFIGURATION-----------
+
 # ----------BEGIN IMPORTS----------
 
 using Pkg;
@@ -16,10 +23,11 @@ using PlotlyJS;
 
 # -----------END IMPORTS-----------
 
-# print instructions for running the program and exit
+# print instructions for running the program and exit 
 function usage()
-    println("placeholder");
-    exit();
+    println("USAGE: julia GraphFuncs.jl <number of function iterations (Int)>
+            <domain (range object) <range (range object)");  
+    exit(); 
 end
 
 # recursively derive 'func' 'amt' number of times
@@ -40,40 +48,18 @@ function getHermite(n)
 end
 
 # evaluate a function across a range
-function mkFuncPts(func, range)
-    vals = [];
-    for ii in range
-        append!(vals, func(ii))
-    end
-    return vals;
-end
+mkFuncPts(func, range) = [func(ii) for ii in range];
 
 # create a scatter to be added to a plot
-function mkScatter(xVals, yVals)
-    return scatter(x=xVals, y=yVals);
-end
+mkScatter(xVals, yVals) = scatter(x=xVals, y=yVals);
 
 # generate list of scatters to be plotted across a shared axis
-## domain:  the shared x values of the plot (range obj)
-## range:   the values at which the functions are to be evaluated (range obj)
+## domain: the shared x values of the plot (range obj)
+## range: the values at which the functions are to be evaluated (range obj)
 ## funcGen: generator of the nth iteration of the provided function
-## amt:     number of functions to be generated (plots to be created) (Int)
-function mkSharedScatters(domain, range, funcGen, amt)
-    
-    # list of scatters to be plotted
-    #scatters = [];
-
-    # generate scatters for the given number, 'amt', of functions
-    #for ii in amt
-        # problem is appending "scatters" doesn't work (they work as expected
-        # inside an array, though, 'append' just doesn't know how to handle them)
-    #    append!(scatters, mkScatter(domain, mkFuncPts(funcGen(ii), range)));
-    #end
-
-    #return scatters;
-
-    return [mkScatter(domain, mkFuncPts(funcGen(ii), range)) for ii in amt];
-end
+## amt: number of functions to be generated (plots to be created) (range obj)
+mkSharedScatters(domain, range, funcGen, amt) = 
+    [mkScatter(domain, mkFuncPts(funcGen(ii), range)) for ii in amt];
 
 # ----------BEGIN INPUT----------
 
@@ -117,6 +103,13 @@ function parseRange(rangeStr)
 
 end
 
+# error check for proper number of command line arguments
+if (length(ARGS) != 3)
+    println("ERR: only 3 command line arguments allowed");
+    usage();
+    exit();
+end
+
 # the number of plots to be made of the provided function
 numPlots = 0:parse(Int, ARGS[1]);
 
@@ -128,21 +121,5 @@ range = parseRange(ARGS[3]);
 
 # -----------END INPUT-----------
 
-# ----------BEGIN CONFIGURATION----------
-
-# get the provided function for a certain value of 'n'
-function getProvFunc(nVal)
-    return (x) -> exp((x^2) / 2) * getHermite(nVal)(x);
-end
-
-# -----------END CONFIGURATION-----------
-
 data = mkSharedScatters(domain, range, getProvFunc, numPlots);
 savefig(plot(data), "output.pdf");
-
-# get both 'x' and 'n' from the command line
-#xIn = parse(Float64, ARGS[1]);
-#nIn = parse(Int, ARGS[2]);
-
-# evaluate and print the found Hermite function
-#println(getHermite(nIn)(xIn))
