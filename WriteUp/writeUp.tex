@@ -64,9 +64,15 @@ Figure \ref{gph:hermite}, was generated with the code displayed in Figure
 \section*{Part B}
 
 \qq Part B asks us to use the MATLAB function {\tt bvp4c} to find the first four
-eigenfunctions of the second order differential equation
-\(y\prime\prime + (\lambda - x^2) y = 0\) in the range \(-L \leq x \leq L\) with
-the boundary conditions \(y(-L) = y(L) = 0\). Unfortunately, we had some trouble
+eigenfunctions of the boundary value problem
+
+\begin{center}
+\begin{tabular}{cc}
+  \(y\prime\prime + (\lambda - x^2) y = 0\) & \(-L \leq x \leq L\) \\
+  \(y(-L) = y(L) = 0\) & \\
+\end{tabular}
+\end{center}
+\qq Unfortunately, we had some trouble
 implementing {\tt bvp4c} in code, Figure \ref{cod:partB}. We could not come up
 with a valid initial guess of the solution, the function on line 27. MATLAB
 complained that a singular Jacobian was encountered, which indicates that the

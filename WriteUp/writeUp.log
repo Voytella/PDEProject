@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  5 DEC 2018 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/MacPorts 2017_3) (preloaded format=pdflatex 2018.5.11)  5 DEC 2018 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1188,16 +1188,16 @@ Overfull \hbox (27.00378pt too wide) in paragraph at lines 26--27
 [][][][][][][] 
  []
 
-) [2 <./MATLAB2.png (PNG copy)>]
+) [2 <./MATLAB2.png (PNG copy)>] [3]
 Overfull \vbox (98.06992pt too high) has occurred while \output is active []
 
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 86.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 86.
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
  (./writeUp.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 86.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 86.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
 Package rerunfilecheck Info: File `writeUp.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  )
@@ -1206,9 +1206,9 @@ Package rerunfilecheck Info: File `writeUp.out' has not changed.
 ### semi simple group (level 1) entered at line 19 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 47700 strings out of 494936
- 1181963 string characters out of 6180785
- 1467137 words of memory out of 5000000
+ 47701 strings out of 494936
+ 1181969 string characters out of 6180785
+ 1468137 words of memory out of 5000000
  50369 multiletter control sequences out of 15000+600000
  19581 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1226,10 +1226,10 @@ s/type1/public/amsfonts/cm/cmr7.pfb></opt/local/share/texmf-texlive/fonts/type1
 /public/amsfonts/cm/cmsy10.pfb></opt/local/share/texmf-texlive/fonts/type1/publ
 ic/amsfonts/cm/cmti10.pfb></opt/local/share/texmf-texlive/fonts/type1/public/am
 sfonts/cm/cmtt10.pfb>
-Output written on writeUp.pdf (4 pages, 157686 bytes).
+Output written on writeUp.pdf (5 pages, 157352 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
- 50 named destinations out of 1000 (max. 500000)
+ 145 PDF objects out of 1000 (max. 8388607)
+ 122 compressed objects within 2 object streams
+ 51 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 

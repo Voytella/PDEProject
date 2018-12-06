@@ -1,9 +1,9 @@
 # Fdb version 3
-["pdflatex"] 1544058985 "writeUp.tex" "writeUp.pdf" "writeUp" 1544058987
+["pdflatex"] 1544059623 "writeUp.tex" "writeUp.pdf" "writeUp" 1544059624
   "../MATLAB/hermite.m" 1544056559 200 6b09d7d2078c716dfa26877cf2b83f6c ""
   "../MATLAB/mat4bvp.m" 1543968033 866 13fde8cdd16cb1b855fa66cc9828851b ""
   "./MATLAB2.png" 1544056997 18572 73acbc80822961a235fadeb0a4fbc05c ""
-  "./writeUp.out" 1544058986 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "./writeUp.out" 1544059624 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/opt/local/etc/texmf/texmf.cnf" 1526053094 30503 9a61e6893861ec0a56455c8e9c9c514e ""
   "/opt/local/share/texmf-texlive/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1467164711 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "/opt/local/share/texmf-texlive/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1467164711 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -249,11 +249,11 @@
   "/opt/local/share/texmf/tex/latex/pgf/utilities/pgfrcs.sty" 1438958880 325 2bcd023400636339210573e2b3ee298b ""
   "/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map" 1526053282 325361 6ec96feaf59b7aa88318abce1b15d893 ""
   "/opt/local/var/db/texmf/web2c/pdftex/pdflatex.fmt" 1526053119 723151 13059fc6e2f6e9a067c035a039dadbdb ""
-  "/usr/local/texlive/texmf-local/tex/latex/preambles/physicsPream.tex" 1544056391 1380 3aa659e6e36fc3b248448e02bb42f4be ""
+  "/usr/local/texlive/texmf-local/tex/latex/preambles/physicsPream.tex" 1544059623 1359 c05cf05772a0dc090c8bcaf4772987a6 ""
   "MATLAB2.png" 1544056997 18572 73acbc80822961a235fadeb0a4fbc05c ""
-  "writeUp.aux" 1544058986 1724 60058c2fade947896e5fb19f8a3429d9 ""
-  "writeUp.out" 1544058986 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "writeUp.tex" 1544058983 2213 2db5eff1464eb62f3cd9aa2bd583775a ""
+  "writeUp.aux" 1544059624 1724 712acadfd4aec0d4cb28afd7de761474 ""
+  "writeUp.out" 1544059624 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "writeUp.tex" 1544059502 2239 afedbbaf2fda76e77c1457700cab207f ""
   (generated)
   "writeUp.pdf"
   "writeUp.out"
