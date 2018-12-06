@@ -38,14 +38,11 @@ function derivMany(func, amt)
     derivMany(derivative(func), amt-1);
 end
 
-# return the n^{th} Hermite polynomial
-function getHermite(n)
+# the exponent within the calculation for the Hermite polynomial
+hermExp = (x) -> exp(-(x^2));
 
-    # explicitly define e^{-(x^2)} (necessary to make the Calculus pkg behave!)
-    hermExp = (x) -> exp(-(x^2));
-    
-    return (x) -> (-1)^n * exp(x^2) * derivMany(hermExp, n)(x);
-end
+# get the n-th Hermite polynomial
+getHermite(n) = (x) -> (-1)^n * exp(x^2) * derivMany(hermExp, n)(x);
 
 # evaluate a function across a range
 mkFuncPts(func, range) = [func(ii) for ii in range];
